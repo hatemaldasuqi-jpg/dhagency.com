@@ -18,3 +18,9 @@ Upload the *contents* of this folder to the repository root. Vercel should redep
 
 
 V11 update: Brands We’ve Worked With list updated to the 16 confirmed DH Agency clients provided by the owner.
+
+
+V12 update: Added DH WEB one-time website design package at 200 JD with CliQ checkout integration.
+
+
+Update: Added professional owner signature “HATEM ALDASUQI” below the header logo on the homepage and success page.

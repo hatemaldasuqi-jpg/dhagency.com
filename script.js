@@ -59,7 +59,7 @@ function buildOrderText(){
   const name = document.getElementById('customerName')?.value.trim() || '';
   const phone = document.getElementById('customerPhone')?.value.trim() || '';
   const project = document.getElementById('projectName')?.value.trim() || '';
-  return `طلب اشتراك DH Agency\nرقم الطلب: ${currentOrderId}\nالباقة: ${selectedPackage.name}\nالمبلغ: ${selectedPackage.price} JD\nالاسم: ${name}\nرقم الهاتف: ${phone}\nالمشروع: ${project}\nطريقة الدفع: CliQ — DHAG\nتم التحويل، وسأرسل إثبات الدفع.`;
+  return `طلب DH Agency\nرقم الطلب: ${currentOrderId}\nالباقة: ${selectedPackage.name}\nالمبلغ: ${selectedPackage.price} JD\nالاسم: ${name}\nرقم الهاتف: ${phone}\nالمشروع: ${project}\nطريقة الدفع: CliQ — DHAG\nتم التحويل، وسأرسل إثبات الدفع.`;
 }
 
 document.querySelectorAll('.subscribe-btn').forEach(btn => {
