@@ -26,3 +26,15 @@ V12 update: Added DH WEB one-time website design package at 200 JD with CliQ che
 Update: Added professional owner signature “HATEM ALDASUQI” below the header logo on the homepage and success page.
 
 Update: Owner signature style changed to a more handwritten look.
+
+
+V16 update:
+- Moved the owner signature out of the header and placed it below the top header area in the hero section.
+- Changed the owner name to a more pen-like handwritten signature style.
+- Added a very faint transparent owner portrait in the hero section as a watermark.
+
+
+V17 update:
+- Moved the owner signature below the dashboard/header instead of placing it inside it.
+- Placed the faded owner portrait beside the handwritten signature.
+- Kept the main hero cleaner by removing the embedded owner watermark and signature from inside the hero content.
