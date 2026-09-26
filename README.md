@@ -1,19 +1,26 @@
-# DH Agency Website V2
+# DH Agency Website V3 — SEO Ready
 
-نسخة ثابتة وجاهزة للنشر على GitHub Pages أو Vercel.
+نسخة جاهزة للنشر على Vercel / GitHub مع تشطيب SEO أساسي للدومين الرسمي:
+`https://dhagency.world`
 
-## الملفات
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/`
+## تمت إضافة
+- Canonical URL للدومين الرسمي بدون www
+- Meta description محسّن
+- Open Graph + Twitter Card
+- صورة مشاركة 1200×630
+- Favicon + Apple Touch Icon + Web App Icons
+- `robots.txt`
+- `sitemap.xml`
+- `site.webmanifest`
+- Organization structured data (JSON-LD)
 
-## رفعها على GitHub Pages
-1. ارفع محتويات المجلد إلى Repository.
-2. من Settings → Pages.
-3. اختر Deploy from a branch.
-4. Branch: `main` / Folder: `/root`.
-5. Save.
+## Google Search Console
+أنشئ Domain property باسم `dhagency.world`. Google سيعطيك TXT verification record؛ أضفه في cPanel → Zone Editor واتركه موجودًا بعد التحقق. بعد نجاح التحقق، أرسل:
+`https://dhagency.world/sitemap.xml`
+من قسم Sitemaps.
 
-## Vercel
-استورد الـRepository واضغط Deploy. لا يوجد Build Command.
+## Vercel Web Analytics
+من Vercel افتح Analytics للمشروع واضغط Enable. لم أضع script ثابتًا داخل HTML لأن Vercel يولد مسار Analytics خاصًا بالمشروع؛ استخدم المسار الذي يعرضه Vercel بعد التفعيل للـ plain HTML site.
+
+## النشر
+استبدل ملفات الـRepository الحالية بمحتويات هذا المجلد ثم Commit/Push. Vercel سيعيد النشر تلقائيًا.
