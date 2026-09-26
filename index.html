@@ -3,161 +3,186 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0d10" />
-  <meta name="description" content="DH Agency — Social, Content & Marketing. باقات إدارة المحتوى والسوشال ميديا للمشاريع والعلامات التجارية." />
-  <meta property="og:title" content="DH Agency — Social • Content • Marketing" />
-  <meta property="og:description" content="اختر الباقة المناسبة لنمو مشروعك مع DH Agency." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="description" content="DH Agency — Social • Content • Marketing. إدارة محتوى، تصميم، ريلز وإعلانات." />
+  <meta property="og:title" content="DH Agency" />
+  <meta property="og:description" content="نصنع حضورًا يليق باسمك." />
   <meta property="og:type" content="website" />
   <title>DH Agency | Social • Content • Marketing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="nav-wrap" id="top">
-    <nav class="nav shell" aria-label="Main navigation">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <div class="shell nav">
       <a class="brand" href="#top" aria-label="DH Agency home">
-        <img src="assets/dh-logo.jpg" alt="DH Agency logo" />
+        <img src="assets/dh-logo-circle.jpg" alt="DH Agency" />
       </a>
-      <div class="nav-links" id="navLinks">
-        <a href="#services" data-i18n="nav.services">خدماتنا</a>
-        <a href="#packages" data-i18n="nav.packages">الباقات</a>
-        <a href="#process" data-i18n="nav.process">كيف نعمل</a>
-        <a href="#faq" data-i18n="nav.faq">الأسئلة</a>
-      </div>
-      <div class="nav-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">◐</button>
-        <button class="lang-btn" id="langToggle" aria-label="Switch language">EN</button>
-        <a class="btn btn-small" href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener" data-i18n="nav.contact">راسلنا</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
-      </div>
-    </nav>
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#services">الخدمات</a>
+        <a href="#packages">الباقات</a>
+        <a href="#why">ليش DH؟</a>
+        <a href="#faq">الأسئلة</a>
+      </nav>
+      <a class="nav-cta" href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener">تواصل معنا</a>
+      <button class="menu" aria-label="فتح القائمة" id="menuBtn"><span></span><span></span></button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero section shell reveal">
-      <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
-      <div class="hero-copy">
-        <div class="eyebrow"><span></span><b>DH AGENCY</b><span data-i18n="hero.kicker">SOCIAL • CONTENT • MARKETING</span></div>
-        <h1 data-i18n="hero.title">مو بس محتوى.<br><em>نبني حضور يتحرّك.</em></h1>
-        <p data-i18n="hero.body">استراتيجية، تصميم، ريلز وإدارة حملات — بهوية راقية وتنفيذ واضح يخلي مشروعك يظهر بثقة ويكبر بخطوات مدروسة.</p>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="kicker">DH AGENCY · SOCIAL · CONTENT · MARKETING</p>
+        <h1>نصنع حضورًا<br><span>يليق باسمك.</span></h1>
+        <p class="hero-text">من الاستراتيجية والتصميم إلى الريلز والإعلانات — نبني محتوى واضح، راقٍ، ومدروس يخلي مشروعك يظهر بثقة.</p>
         <div class="hero-actions">
-          <a class="btn" href="#packages"><span data-i18n="hero.cta">استكشف الباقات</span><b>↘</b></a>
-          <a class="text-link" href="https://instagram.com/dh.agency1" target="_blank" rel="noopener"><span>@dh.agency1</span><i>↗</i></a>
+          <a class="btn primary" href="#packages">شوف الباقات <b>↙</b></a>
+          <a class="btn ghost" href="https://instagram.com/dh.agency1" target="_blank" rel="noopener">@dh.agency1 ↗</a>
         </div>
-        <div class="hero-tags" aria-label="Services"><span>Strategy</span><span>Content</span><span>Reels</span><span>Ads</span><span>Growth</span></div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div>
-        <div class="monogram"><span>D</span><span>H</span><i></i></div>
-        <div class="floating-card fc-a"><small>01</small><strong>STRATEGY</strong><p>Clarity before content.</p></div>
-        <div class="floating-card fc-b"><small>02</small><strong>CONTENT</strong><p>Design that feels premium.</p></div>
-        <div class="floating-card fc-c"><small>03</small><strong>GROWTH</strong><p>Campaigns built to learn.</p></div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="logo-card">
+          <img src="assets/dh-logo.jpg" alt="" />
+          <div class="logo-shine"></div>
+        </div>
+        <div class="micro micro-a"><small>01</small><strong>STRATEGY</strong></div>
+        <div class="micro micro-b"><small>02</small><strong>CONTENT</strong></div>
+        <div class="micro micro-c"><small>03</small><strong>GROWTH</strong></div>
       </div>
     </section>
 
-    <section class="marquee" aria-hidden="true"><div class="marquee-track"><span>DH AGENCY</span><i>•</i><span>SOCIAL</span><i>•</i><span>CONTENT</span><i>•</i><span>MARKETING</span><i>•</i><span>DH AGENCY</span><i>•</i><span>SOCIAL</span><i>•</i><span>CONTENT</span><i>•</i><span>MARKETING</span></div></section>
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>STRATEGY</span><i>•</i><span>CONTENT</span><i>•</i><span>REELS</span><i>•</i><span>ADS</span><i>•</i><span>GROWTH</span><i>•</i>
+        <span>STRATEGY</span><i>•</i><span>CONTENT</span><i>•</i><span>REELS</span><i>•</i><span>ADS</span><i>•</i><span>GROWTH</span>
+      </div>
+    </section>
 
     <section class="section shell" id="services">
-      <div class="section-head reveal"><div><span class="section-no">01</span><p class="eyebrow-text" data-i18n="services.kicker">WHAT WE DO</p></div><h2 data-i18n="services.title">من الفكرة إلى حضور<br>يُلاحظ ويُتذكر.</h2></div>
-      <div class="service-grid">
-        <article class="service-card reveal"><span class="service-index">01</span><div class="service-icon">✦</div><h3 data-i18n="services.s1t">إدارة السوشال ميديا</h3><p data-i18n="services.s1b">خطة محتوى، نشر، تنسيق الحسابات ومتابعة الأداء بصورة منظمة.</p></article>
-        <article class="service-card reveal"><span class="service-index">02</span><div class="service-icon">◌</div><h3 data-i18n="services.s2t">تصميم وهوية المحتوى</h3><p data-i18n="services.s2b">تصاميم متناسقة تحافظ على هوية البراند وتخليه واضح من أول نظرة.</p></article>
-        <article class="service-card reveal"><span class="service-index">03</span><div class="service-icon">▶</div><h3 data-i18n="services.s3t">ريلز ومحتوى قصير</h3><p data-i18n="services.s3b">أفكار وإخراج محتوى سريع يناسب المنصات ويخدم هدف الصفحة.</p></article>
-        <article class="service-card reveal"><span class="service-index">04</span><div class="service-icon">↗</div><h3 data-i18n="services.s4t">إدارة الإعلانات</h3><p data-i18n="services.s4b">إعداد الحملات، الاستهداف، المتابعة والتحسين للوصول لنتائج أفضل.</p></article>
+      <div class="section-title reveal">
+        <p>01 / خدماتنا</p>
+        <h2>كل شيء تحتاجه صفحتك<br>بدون زحمة.</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service reveal">
+          <span>01</span>
+          <h3>إدارة المحتوى</h3>
+          <p>خطة شهرية، كتابة، تصميم، نشر وجدولة بطريقة مرتبة ومتناسقة.</p>
+        </article>
+        <article class="service reveal">
+          <span>02</span>
+          <h3>ريلز وهوية بصرية</h3>
+          <p>محتوى قصير وتصاميم تحمل نفس روح البراند وتظهره بشكل احترافي.</p>
+        </article>
+        <article class="service reveal">
+          <span>03</span>
+          <h3>إعلانات ونمو</h3>
+          <p>إعداد الحملات، الاستهداف، التحسين والمتابعة بناءً على الأداء الحقيقي.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section packages-section" id="packages">
+    <section class="section packages" id="packages">
       <div class="shell">
-        <div class="section-head reveal"><div><span class="section-no">02</span><p class="eyebrow-text" data-i18n="packages.kicker">PACKAGES</p></div><h2 data-i18n="packages.title">اختَر مستوى النمو<br>المناسب لمشروعك.</h2></div>
-        <div class="package-tabs reveal" role="tablist" aria-label="Packages">
-          <button class="tab active" data-package="mini">MINI <small>35 JD</small></button>
-          <button class="tab" data-package="start">START <small>99 JD</small></button>
-          <button class="tab" data-package="growth">GROWTH <small>179 JD</small><b data-i18n="packages.popular">الأكثر طلباً</b></button>
-          <button class="tab" data-package="scale">SCALE <small>299 JD</small></button>
+        <div class="section-title reveal">
+          <p>02 / الباقات</p>
+          <h2>اختَر الباقة اللي تناسب<br>مرحلة مشروعك.</h2>
         </div>
 
-        <div class="package-stage reveal" id="packageStage">
-          <div class="package-copy">
-            <div class="package-topline"><span id="packageLabel">DH MINI</span><i id="packageDot"></i></div>
-            <div class="price-row"><strong id="packagePrice">35</strong><div><b>JD</b><small>/ Month</small></div></div>
-            <h3 id="packageTitle">بداية خفيفة… بشكل احترافي</h3>
-            <p id="packageDescription">للمشاريع الصغيرة أو العملاء اللي بدهم محتوى مرتب بتكلفة خفيفة.</p>
-            <ul id="packageFeatures"></ul>
-            <div class="package-actions">
-              <a id="packageCta" class="btn" href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener"><span data-i18n="packages.cta">اختَر هذه الباقة</span><b>↗</b></a>
-              <button id="viewPoster" class="ghost-btn" data-i18n="packages.poster">عرض التصميم</button>
-            </div>
-            <p class="package-note" id="packageNote">إدارة الحسابات والنشر والإعلانات غير مشمولة.</p>
-          </div>
-          <div class="package-art"><div class="art-frame"><img id="packageImage" src="assets/packages/mini.png" alt="DH MINI package design"></div><div class="art-label"><span>DH / PACKAGE SYSTEM</span><b id="artColorName">ORANGE</b></div></div>
+        <div class="package-grid">
+          <article class="package-card mini reveal">
+            <div class="package-head"><span>DH MINI</span><b>35 JD</b></div>
+            <h3>بداية خفيفة</h3>
+            <p>للمشاريع الصغيرة اللي بدها محتوى مرتب بدون إدارة كاملة.</p>
+            <ul><li>4 Posts</li><li>1 Reel</li><li>4 Stories</li><li>كتابة الكابشن</li><li>خطة محتوى مصغّرة</li></ul>
+            <button class="poster-btn" data-img="assets/packages/mini.png">عرض التصميم</button>
+          </article>
+
+          <article class="package-card start reveal">
+            <div class="package-head"><span>DH START</span><b>99 JD</b></div>
+            <h3>حضور ثابت ومرتب</h3>
+            <p>للصفحات الجديدة اللي بدها تبدأ بشكل احترافي وواضح.</p>
+            <ul><li>8 Posts</li><li>3 Reels</li><li>12 Stories</li><li>Instagram + Facebook</li><li>تقرير أداء شهري</li></ul>
+            <button class="poster-btn" data-img="assets/packages/start.png">عرض التصميم</button>
+          </article>
+
+          <article class="package-card growth featured reveal">
+            <div class="popular">الأكثر طلبًا</div>
+            <div class="package-head"><span>DH GROWTH</span><b>179 JD</b></div>
+            <h3>نمو فعلي ومستمر</h3>
+            <p>للأنشطة اللي بدها محتوى أقوى مع إدارة حملة إعلانية.</p>
+            <ul><li>12 Posts</li><li>6 Reels</li><li>20 Stories</li><li>إدارة حملة إعلانية</li><li>تقرير أداء شهري</li></ul>
+            <button class="poster-btn" data-img="assets/packages/growth.png">عرض التصميم</button>
+          </article>
+
+          <article class="package-card scale reveal">
+            <div class="package-head"><span>DH SCALE</span><b>299 JD</b></div>
+            <h3>إدارة وتسويق متكامل</h3>
+            <p>للبراندات اللي بدها فريق يمسك المحتوى والحملات والمتابعة بشكل أوسع.</p>
+            <ul><li>16 Posts</li><li>10 Reels</li><li>Stories يومية</li><li>حتى 3 حملات إعلانية</li><li>تقرير أسبوعي + شهري</li></ul>
+            <button class="poster-btn" data-img="assets/packages/scale.png">عرض التصميم</button>
+          </article>
         </div>
 
-        <div class="compare reveal">
-          <div class="compare-head"><h3 data-i18n="compare.title">مقارنة سريعة</h3><p data-i18n="compare.body">الفرق الأساسي بين الباقات، بدون تعقيد.</p></div>
-          <div class="compare-table-wrap">
-            <table class="compare-table">
-              <thead><tr><th data-i18n="compare.feature">الخدمة</th><th>MINI</th><th>START</th><th class="recommended">GROWTH</th><th>SCALE</th></tr></thead>
-              <tbody>
-                <tr><td data-i18n="compare.posts">Posts</td><td>4</td><td>8</td><td>12</td><td>16</td></tr>
-                <tr><td>Reels</td><td>1</td><td>3</td><td>6</td><td>10</td></tr>
-                <tr><td>Stories</td><td>4</td><td>12</td><td>20</td><td data-i18n="compare.daily">يومية</td></tr>
-                <tr><td data-i18n="compare.management">إدارة الحسابات</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-                <tr><td data-i18n="compare.ads">إدارة حملات</td><td>—</td><td>—</td><td>1</td><td>3</td></tr>
-                <tr><td data-i18n="compare.community">التعليقات والرسائل</td><td>—</td><td>—</td><td data-i18n="compare.basic">أساسية</td><td>✓</td></tr>
-                <tr><td data-i18n="compare.report">التقارير</td><td>—</td><td data-i18n="compare.monthly">شهري</td><td data-i18n="compare.monthly">شهري</td><td data-i18n="compare.weekly">أسبوعي + شهري</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="compare-note" data-i18n="compare.note">* ميزانية الإعلانات الممولة غير مشمولة ضمن أسعار الباقات.</p>
-        </div>
+        <p class="ad-note reveal">* ميزانية الإعلانات الممولة غير مشمولة ضمن أسعار الباقات.</p>
       </div>
     </section>
 
-    <section class="section shell" id="process">
-      <div class="section-head reveal"><div><span class="section-no">03</span><p class="eyebrow-text" data-i18n="process.kicker">PROCESS</p></div><h2 data-i18n="process.title">شغل واضح.<br>خطوات واضحة.</h2></div>
-      <div class="process-list">
-        <article class="process-item reveal"><span>01</span><div><h3 data-i18n="process.p1t">نفهم المشروع</h3><p data-i18n="process.p1b">نجمع أهدافك، جمهورك، العرض الأساسي وهوية البراند قبل أي تصميم.</p></div><i>↘</i></article>
-        <article class="process-item reveal"><span>02</span><div><h3 data-i18n="process.p2t">نبني الخطة</h3><p data-i18n="process.p2b">نحدد نوع المحتوى، الرسائل، جدول النشر وأولويات الحملات.</p></div><i>↘</i></article>
-        <article class="process-item reveal"><span>03</span><div><h3 data-i18n="process.p3t">ننفّذ وننشر</h3><p data-i18n="process.p3b">تصميم، كتابة، ريلز وجدولة بأسلوب متناسق مع الهوية.</p></div><i>↘</i></article>
-        <article class="process-item reveal"><span>04</span><div><h3 data-i18n="process.p4t">نراجع ونحسّن</h3><p data-i18n="process.p4b">نقرأ النتائج ونعدّل المحتوى والحملات بناءً على الأداء الحقيقي.</p></div><i>↘</i></article>
-      </div>
-    </section>
-
-    <section class="cta-section section reveal">
-      <div class="shell cta-inner">
-        <div><p class="eyebrow-text">DH AGENCY</p><h2 data-i18n="cta.title">جاهز نخلي مشروعك<br><em>يبان بشكل يليق فيه؟</em></h2></div>
-        <div class="cta-side"><p data-i18n="cta.body">ابعثلنا نوع مشروعك وهدفك، ونساعدك تختار الباقة الأنسب.</p><a class="btn light" href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener"><span data-i18n="cta.button">ابدأ المحادثة</span><b>↗</b></a></div>
+    <section class="section shell" id="why">
+      <div class="why-panel reveal">
+        <div>
+          <p class="why-kicker">WHY DH?</p>
+          <h2>الفرق مش بكثرة المحتوى.<br>الفرق بطريقة تقديمه.</h2>
+        </div>
+        <div class="why-list">
+          <div><b>01</b><span><strong>هوية واضحة</strong><small>كل تصميم وكل Reel يطلع من نفس شخصية البراند.</small></span></div>
+          <div><b>02</b><span><strong>تنفيذ منظم</strong><small>خطة ومواعيد ومتابعة بدون فوضى أو قرارات عشوائية.</small></span></div>
+          <div><b>03</b><span><strong>تفكير بالنمو</strong><small>المحتوى والحملات يخدموا هدف المشروع، مش مجرد شكل.</small></span></div>
+        </div>
       </div>
     </section>
 
     <section class="section shell" id="faq">
-      <div class="section-head reveal"><div><span class="section-no">04</span><p class="eyebrow-text">FAQ</p></div><h2 data-i18n="faq.title">قبل ما تبدأ.</h2></div>
-      <div class="faq-list">
-        <details class="reveal"><summary data-i18n="faq.q1">هل ميزانية الإعلانات داخلة في سعر الباقة؟</summary><p data-i18n="faq.a1">لا. سعر الباقة يغطي إدارة الحملة حسب الباقة، أما ميزانية Meta نفسها فيدفعها العميل بشكل منفصل.</p></details>
-        <details class="reveal"><summary data-i18n="faq.q2">هل أقدر أبدأ ببكج MINI وبعدها أطور؟</summary><p data-i18n="faq.a2">أكيد. MINI معمولة كبداية خفيفة، وتقدر تنتقل لأي باقة أعلى لما تزيد حاجتك للإدارة والمحتوى.</p></details>
-        <details class="reveal"><summary data-i18n="faq.q3">شو الفرق بين GROWTH وSCALE؟</summary><p data-i18n="faq.a3">GROWTH مناسبة للنمو المنتظم مع حملة واحدة، بينما SCALE تشمل محتوى أكثر، Stories يومية، إدارة مجتمع وحتى 3 حملات مع متابعة وتقارير أوسع.</p></details>
-        <details class="reveal"><summary data-i18n="faq.q4">هل المحتوى مناسب لكل المجالات؟</summary><p data-i18n="faq.a4">الخطة تتكيّف حسب المجال والجمهور، لكن حجم التصوير أو الإنتاج الخاص قد يُسعّر بشكل منفصل إذا احتاج المشروع ذلك.</p></details>
+      <div class="section-title reveal">
+        <p>03 / FAQ</p>
+        <h2>أسئلة قبل الاشتراك.</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>هل ميزانية الإعلانات داخلة بسعر الباقة؟</summary><p>لا. إدارة الحملات تكون حسب الباقة، أما ميزانية Meta نفسها فتكون منفصلة.</p></details>
+        <details class="reveal"><summary>هل بقدر أغير الباقة لاحقًا؟</summary><p>أكيد. تقدر تبدأ بالباقة المناسبة حاليًا وتنتقل لباقتك التالية مع نمو احتياجك.</p></details>
+        <details class="reveal"><summary>هل التصوير مشمول؟</summary><p>الإنتاج أو جلسات التصوير الخاصة يتم تسعيرها بشكل منفصل إذا احتاج المشروع.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="shell final-inner reveal">
+        <div>
+          <p>READY TO GROW?</p>
+          <h2>خلّي حضور مشروعك<br>يبدأ صح.</h2>
+        </div>
+        <a class="btn light" href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener">ابدأ المحادثة ↗</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="shell footer-grid">
-      <div class="footer-brand"><img src="assets/dh-logo.jpg" alt="DH Agency" /><p>SOCIAL • CONTENT • MARKETING</p></div>
-      <div><small data-i18n="footer.nav">روابط</small><a href="#services" data-i18n="nav.services">خدماتنا</a><a href="#packages" data-i18n="nav.packages">الباقات</a><a href="#faq" data-i18n="nav.faq">الأسئلة</a></div>
-      <div><small data-i18n="footer.social">تواصل</small><a href="https://instagram.com/dh.agency1" target="_blank" rel="noopener">Instagram ↗</a><a href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener">Direct Message ↗</a></div>
-      <div class="footer-end"><small>DH AGENCY</small><p>Amman, Jordan</p><p>© <span id="year"></span> DH Agency.</p></div>
+    <div class="shell footer-inner">
+      <div class="footer-brand"><img src="assets/dh-logo.jpg" alt="DH Agency" /><span>SOCIAL • CONTENT • MARKETING</span></div>
+      <div class="footer-links"><a href="https://instagram.com/dh.agency1" target="_blank" rel="noopener">Instagram</a><span>Amman, Jordan</span><span>© <b id="year"></b> DH Agency</span></div>
     </div>
   </footer>
 
   <dialog id="posterModal" class="poster-modal">
-    <button id="closePoster" aria-label="Close">×</button>
-    <img id="modalImage" src="assets/packages/mini.png" alt="Package design preview" />
+    <button id="closeModal" aria-label="إغلاق">×</button>
+    <img id="modalImage" src="assets/packages/mini.png" alt="تصميم الباقة" />
   </dialog>
+
   <script src="script.js"></script>
 </body>
 </html>
