@@ -99,5 +99,29 @@ function updateContactLinks(){
     email.href = `mailto:info@dhagency.world?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text + '\n\nيرجى إرفاق صورة إثبات التحويل قبل الإرسال.')}`;
   }
 }
+
+function getOrderData(){
+  return {
+    orderId: currentOrderId,
+    packageName: selectedPackage.name,
+    price: selectedPackage.price,
+    name: document.getElementById('customerName')?.value.trim() || '',
+    phone: document.getElementById('customerPhone')?.value.trim() || '',
+    project: document.getElementById('projectName')?.value.trim() || '',
+    createdAt: new Date().toISOString()
+  };
+}
+function saveOrderForSuccess(){
+  const data = getOrderData();
+  try { sessionStorage.setItem('dhOrder', JSON.stringify(data)); } catch(e) {}
+  const params = new URLSearchParams({order:data.orderId,pkg:data.packageName,price:data.price});
+  window.location.href = `success.html?${params.toString()}`;
+}
+document.getElementById('confirmTransfer')?.addEventListener('click', saveOrderForSuccess);
+document.getElementById('quickWhatsApp')?.addEventListener('click', () => {
+  const text = buildOrderText();
+  window.open(`https://wa.me/962798663834?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+});
+
 document.getElementById('sendWhatsApp')?.addEventListener('click', updateContactLinks);
 document.getElementById('sendEmail')?.addEventListener('click', updateContactLinks);

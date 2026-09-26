@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3f2ef" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>تأكيد الطلب | DH Agency</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body class="success-body">
+  <header class="success-header">
+    <div class="shell">
+      <img src="assets/dh-logo-circle.jpg" alt="DH Agency" />
+      <a href="/">العودة للموقع ←</a>
+    </div>
+  </header>
+
+  <main class="success-main">
+    <section class="success-card" aria-labelledby="successTitle">
+      <div class="success-mark">✓</div>
+      <p class="success-eyebrow">ORDER CONFIRMATION · DH AGENCY</p>
+      <h1 id="successTitle">تم تسجيل خطوة التحويل.</h1>
+      <p>بقيت خطوة أخيرة: أرسل صورة الحوالة حتى يراجع فريق DH التحويل ويؤكد بدء الاشتراك. هذه الصفحة لا تعني أن الدفع تم تأكيده تلقائيًا.</p>
+
+      <div class="success-order">
+        <div class="success-row"><span>رقم الطلب</span><strong id="sOrder">—</strong></div>
+        <div class="success-row"><span>الباقة</span><strong id="sPackage">—</strong></div>
+        <div class="success-row"><span>المبلغ</span><strong><b id="sPrice">—</b> JD</strong></div>
+        <div class="success-row"><span>CliQ Alias</span><strong>DHAG</strong></div>
+      </div>
+
+      <div class="success-actions">
+        <a id="successWhatsApp" class="checkout-primary" href="https://wa.me/962798663834" target="_blank" rel="noopener">إرسال الإثبات عبر WhatsApp ↗</a>
+        <a id="successEmail" class="checkout-secondary" href="mailto:info@dhagency.world">إرسال بالإيميل ✉</a>
+      </div>
+      <button id="successCopy" class="checkout-secondary" type="button" style="width:100%;margin-top:10px">نسخ تفاصيل الطلب</button>
+      <p class="success-note">أرفق صورة الحوالة في الرسالة. لا ترسل OTP أو بيانات بطاقة أو كلمة مرور.</p>
+    </section>
+  </main>
+
+  <footer class="success-footer"><div class="shell"><span>DH AGENCY · SOCIAL · CONTENT · MARKETING</span><span>info@dhagency.world · +962 79 866 3834</span></div></footer>
+
+  <script>
+    const qs = new URLSearchParams(location.search);
+    let order = {};
+    try { order = JSON.parse(sessionStorage.getItem('dhOrder') || '{}'); } catch(e) {}
+    const data = {
+      orderId: order.orderId || qs.get('order') || '—',
+      packageName: order.packageName || qs.get('pkg') || '—',
+      price: order.price || qs.get('price') || '—',
+      name: order.name || '', phone: order.phone || '', project: order.project || ''
+    };
+    document.getElementById('sOrder').textContent = data.orderId;
+    document.getElementById('sPackage').textContent = data.packageName;
+    document.getElementById('sPrice').textContent = data.price;
+    const text = `طلب اشتراك DH Agency\nرقم الطلب: ${data.orderId}\nالباقة: ${data.packageName}\nالمبلغ: ${data.price} JD\nالاسم: ${data.name}\nرقم الهاتف: ${data.phone}\nالمشروع: ${data.project}\nطريقة الدفع: CliQ — DHAG\nتم التحويل، ومرفق إثبات الدفع.`;
+    document.getElementById('successWhatsApp').href = `https://wa.me/962798663834?text=${encodeURIComponent(text)}`;
+    document.getElementById('successEmail').href = `mailto:info@dhagency.world?subject=${encodeURIComponent(`DH Agency - ${data.orderId} - ${data.packageName}`)}&body=${encodeURIComponent(text + '\n\nيرجى إرفاق صورة إثبات التحويل قبل الإرسال.')}`;
+    document.getElementById('successCopy').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(text); document.getElementById('successCopy').textContent='تم النسخ ✓'; }
+      catch(e) { alert(text); }
+    });
+  </script>
+</body>
+</html>
