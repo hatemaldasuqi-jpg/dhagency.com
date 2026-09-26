@@ -38,3 +38,8 @@ V17 update:
 - Moved the owner signature below the dashboard/header instead of placing it inside it.
 - Placed the faded owner portrait beside the handwritten signature.
 - Kept the main hero cleaner by removing the embedded owner watermark and signature from inside the hero content.
+
+
+V18 update:
+- Replaced the handwritten text-based founder signature with the provided official gold signature image.
+- Kept the faded owner portrait beside the signature below the dashboard/header.
