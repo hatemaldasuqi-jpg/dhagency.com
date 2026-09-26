@@ -43,3 +43,11 @@ V17 update:
 V18 update:
 - Replaced the handwritten text-based founder signature with the provided official gold signature image.
 - Kept the faded owner portrait beside the signature below the dashboard/header.
+
+V19 update:
+- Cleaned the founder signature asset by removing stray black specks/noise around the signature.
+
+
+V20 update:
+- Replaced the homepage hero image with the provided Replit × DH Agency collaboration image.
+- Kept the existing hero frame, layout, overlays, signature, checkout, SEO, analytics, and all previous functionality unchanged.

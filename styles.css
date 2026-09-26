@@ -95,3 +95,7 @@
 .hero-visual{z-index:2}
 @media(max-width:980px){.owner-strip{padding-top:108px}.owner-strip-card{gap:14px;padding:10px 14px 10px 10px}.owner-strip-photo{width:74px;height:74px}.owner-strip-signature-img{height:52px;max-width:420px}}
 @media(max-width:640px){.owner-strip{padding-top:94px}.owner-strip-card{width:100%;border-radius:20px;gap:12px;padding:10px 12px}.owner-strip-photo{width:64px;height:64px;border-radius:16px}.owner-strip-label{font-size:9px;letter-spacing:.14em}.owner-strip-signature-img{height:40px;max-width:100%}.hero{padding-top:24px}}
+
+
+/* V20 — new hero image */
+.logo-card img{object-fit:cover;object-position:center 48%;transform:scale(1.03)}
