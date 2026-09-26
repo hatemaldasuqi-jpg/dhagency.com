@@ -93,7 +93,7 @@ function updateContactLinks(){
   const text = buildOrderText();
   const wa = document.getElementById('sendWhatsApp');
   const email = document.getElementById('sendEmail');
-  if(wa) wa.href = `https://wa.me/962796883834?text=${encodeURIComponent(text)}`;
+  if(wa) wa.href = `https://wa.me/962798663834?text=${encodeURIComponent(text)}`;
   if(email){
     const subject = `DH Agency - ${currentOrderId} - ${selectedPackage.name}`;
     email.href = `mailto:info@dhagency.world?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text + '\n\nيرجى إرفاق صورة إثبات التحويل قبل الإرسال.')}`;

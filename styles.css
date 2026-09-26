@@ -8,3 +8,14 @@
 @media(max-width:640px){.package-actions{grid-template-columns:1fr}.checkout-wrap{padding:24px 18px 20px;border-radius:24px}.checkout-brand{padding-left:44px}.checkout-step h3{font-size:23px}.checkout-summary{padding:18px}.bank-row{grid-template-columns:90px 1fr auto;padding:15px 13px;gap:9px}.bank-row strong{font-size:11px}.bank-row.highlight strong{font-size:20px}.checkout-actions{grid-template-columns:1fr}.pay-amount strong{font-size:27px}}
 
 .checkout-actions-three{grid-template-columns:1.35fr 1fr 1fr}.proof-help{font-size:10.5px;color:#77736e;line-height:1.8;margin:10px 3px 0;text-align:center}@media(max-width:760px){.checkout-actions-three{grid-template-columns:1fr}}
+
+/* Floating WhatsApp contact */
+.whatsapp-float{position:fixed;left:24px;bottom:24px;z-index:95;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;text-decoration:none;box-shadow:0 14px 34px rgba(0,0,0,.22);transition:transform .2s ease,box-shadow .2s ease;isolation:isolate}
+.whatsapp-float::before{content:"";position:absolute;inset:-7px;border-radius:inherit;border:1px solid rgba(37,211,102,.38);animation:waPulse 2.4s ease-out infinite;z-index:-1}
+.whatsapp-float svg{width:31px;height:31px;fill:currentColor;display:block}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 42px rgba(0,0,0,.28)}
+.whatsapp-float:focus-visible{outline:3px solid rgba(37,211,102,.32);outline-offset:4px}
+.whatsapp-float-label{position:absolute;left:72px;white-space:nowrap;background:#111113;color:#fff;padding:8px 11px;border-radius:10px;font-family:"Manrope",sans-serif;font-size:11px;letter-spacing:.05em;opacity:0;transform:translateX(-5px);pointer-events:none;transition:.2s}
+.whatsapp-float:hover .whatsapp-float-label{opacity:1;transform:none}
+@keyframes waPulse{0%{opacity:.75;transform:scale(.88)}70%,100%{opacity:0;transform:scale(1.28)}}
+@media(max-width:640px){.whatsapp-float{left:16px;bottom:16px;width:56px;height:56px}.whatsapp-float svg{width:29px;height:29px}.whatsapp-float-label{display:none}}

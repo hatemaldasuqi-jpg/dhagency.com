@@ -22,7 +22,11 @@ Upload all files in this folder to the existing GitHub repository. Vercel will d
 
 
 ## Contact checkout update
-- WhatsApp: +962796883834
+- WhatsApp: +962798663834
 - Email: info@dhagency.world
 - Checkout generates a pre-filled WhatsApp message and a pre-filled email draft with order number, package, price and customer details.
 - Payment proof image is attached manually by the customer in WhatsApp or email.
+
+
+## V8 update
+Added a floating WhatsApp button fixed to the lower-left corner. It opens a direct chat with +962798663834 and a short prefilled inquiry message.
