@@ -154,7 +154,10 @@
             <h3>بداية خفيفة</h3>
             <p>للمشاريع الصغيرة اللي بدها محتوى مرتب بدون إدارة كاملة.</p>
             <ul><li>4 Posts</li><li>1 Reel</li><li>4 Stories</li><li>كتابة الكابشن</li><li>خطة محتوى مصغّرة</li></ul>
-            <button class="poster-btn" data-img="assets/packages/mini.png">عرض التصميم</button>
+            <div class="package-actions">
+              <button class="subscribe-btn" data-package="DH MINI" data-price="35">اشترك الآن</button>
+              <button class="poster-btn" data-img="assets/packages/mini.png">عرض التصميم</button>
+            </div>
           </article>
 
           <article class="package-card start reveal">
@@ -162,7 +165,10 @@
             <h3>حضور ثابت ومرتب</h3>
             <p>للصفحات الجديدة اللي بدها تبدأ بشكل احترافي وواضح.</p>
             <ul><li>8 Posts</li><li>3 Reels</li><li>12 Stories</li><li>Instagram + Facebook</li><li>تقرير أداء شهري</li></ul>
-            <button class="poster-btn" data-img="assets/packages/start.png">عرض التصميم</button>
+            <div class="package-actions">
+              <button class="subscribe-btn" data-package="DH START" data-price="99">اشترك الآن</button>
+              <button class="poster-btn" data-img="assets/packages/start.png">عرض التصميم</button>
+            </div>
           </article>
 
           <article class="package-card growth featured reveal">
@@ -171,7 +177,10 @@
             <h3>نمو فعلي ومستمر</h3>
             <p>للأنشطة اللي بدها محتوى أقوى مع إدارة حملة إعلانية.</p>
             <ul><li>12 Posts</li><li>6 Reels</li><li>20 Stories</li><li>إدارة حملة إعلانية</li><li>تقرير أداء شهري</li></ul>
-            <button class="poster-btn" data-img="assets/packages/growth.png">عرض التصميم</button>
+            <div class="package-actions">
+              <button class="subscribe-btn" data-package="DH GROWTH" data-price="179">اشترك الآن</button>
+              <button class="poster-btn" data-img="assets/packages/growth.png">عرض التصميم</button>
+            </div>
           </article>
 
           <article class="package-card scale reveal">
@@ -179,7 +188,10 @@
             <h3>إدارة وتسويق متكامل</h3>
             <p>للبراندات اللي بدها فريق يمسك المحتوى والحملات والمتابعة بشكل أوسع.</p>
             <ul><li>16 Posts</li><li>10 Reels</li><li>Stories يومية</li><li>حتى 3 حملات إعلانية</li><li>تقرير أسبوعي + شهري</li></ul>
-            <button class="poster-btn" data-img="assets/packages/scale.png">عرض التصميم</button>
+            <div class="package-actions">
+              <button class="subscribe-btn" data-package="DH SCALE" data-price="299">اشترك الآن</button>
+              <button class="poster-btn" data-img="assets/packages/scale.png">عرض التصميم</button>
+            </div>
           </article>
         </div>
 
@@ -210,6 +222,7 @@
         <details class="reveal"><summary>هل ميزانية الإعلانات داخلة بسعر الباقة؟</summary><p>لا. إدارة الحملات تكون حسب الباقة، أما ميزانية Meta نفسها فتكون منفصلة.</p></details>
         <details class="reveal"><summary>هل بقدر أغير الباقة لاحقًا؟</summary><p>أكيد. تقدر تبدأ بالباقة المناسبة حاليًا وتنتقل لباقتك التالية مع نمو احتياجك.</p></details>
         <details class="reveal"><summary>هل التصوير مشمول؟</summary><p>الإنتاج أو جلسات التصوير الخاصة يتم تسعيرها بشكل منفصل إذا احتاج المشروع.</p></details>
+        <details class="reveal"><summary>كيف يتم الدفع؟</summary><p>بعد اختيار الباقة، تقدر تدفع مباشرة عبر CliQ إلى DHAG. يتم تأكيد الاشتراك بعد مراجعة التحويل.</p></details>
       </div>
     </section>
 
@@ -219,7 +232,7 @@
           <p>READY TO GROW?</p>
           <h2>خلّي حضور مشروعك<br>يبدأ صح.</h2>
         </div>
-        <a class="btn light" href="https://ig.me/m/dh.agency1" target="_blank" rel="noopener">ابدأ المحادثة ↗</a>
+        <a class="btn light" href="https://wa.me/962796883834" target="_blank" rel="noopener">تواصل عبر WhatsApp ↗</a>
       </div>
     </section>
   </main>
@@ -227,9 +240,64 @@
   <footer class="footer">
     <div class="shell footer-inner">
       <div class="footer-brand"><img src="assets/dh-logo.jpg" alt="DH Agency" /><span>SOCIAL • CONTENT • MARKETING</span></div>
-      <div class="footer-links"><a href="https://instagram.com/dh.agency1" target="_blank" rel="noopener">Instagram</a><span>Amman, Jordan</span><span>© <b id="year"></b> DH Agency</span></div>
+      <div class="footer-links"><a href="https://instagram.com/dh.agency1" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/962796883834" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:info@dhagency.world">info@dhagency.world</a><span>Amman, Jordan</span><span>© <b id="year"></b> DH Agency</span></div>
     </div>
   </footer>
+
+  <dialog id="checkoutModal" class="checkout-modal" aria-labelledby="checkoutTitle">
+    <button id="closeCheckout" class="checkout-close" aria-label="إغلاق">×</button>
+    <div class="checkout-wrap">
+      <div class="checkout-brand">
+        <img src="assets/dh-logo-circle.jpg" alt="DH Agency" />
+        <div>
+          <small>SECURE MANUAL CHECKOUT</small>
+          <strong>الدفع عبر CliQ</strong>
+        </div>
+      </div>
+
+      <div id="checkoutFormStep" class="checkout-step active">
+        <div class="checkout-summary">
+          <span>الباقة المختارة</span>
+          <strong id="checkoutPackage">DH MINI</strong>
+          <b><span id="checkoutPrice">35</span> JD</b>
+        </div>
+        <h3 id="checkoutTitle">أدخل بياناتك لإكمال الطلب</h3>
+        <p class="checkout-intro">لن يتم خصم أي مبلغ من الموقع. بعد المتابعة ستظهر لك بيانات التحويل عبر CliQ.</p>
+        <form id="checkoutForm" class="checkout-form">
+          <label>الاسم الكامل<input id="customerName" name="name" autocomplete="name" required placeholder="اسمك الكامل" /></label>
+          <label>رقم الهاتف<input id="customerPhone" name="phone" inputmode="tel" autocomplete="tel" required placeholder="07XXXXXXXX" /></label>
+          <label>اسم المشروع<input id="projectName" name="project" required placeholder="اسم البراند أو المشروع" /></label>
+          <button class="checkout-primary" type="submit">متابعة للدفع <span>←</span></button>
+        </form>
+      </div>
+
+      <div id="checkoutPayStep" class="checkout-step">
+        <div class="order-pill">رقم الطلب <strong id="orderId">DH-0000</strong></div>
+        <h3>حوّل قيمة الباقة عبر CliQ</h3>
+        <p class="checkout-intro">حوّل المبلغ الظاهر أدناه، وبعدها أرسل إثبات التحويل حتى يتم تأكيد اشتراكك.</p>
+
+        <div class="pay-amount"><span>المبلغ المطلوب</span><strong><b id="payPrice">35</b> JD</strong></div>
+
+        <div class="bank-card">
+          <div class="bank-row highlight"><span>CliQ Alias</span><strong>DHAG</strong><button type="button" class="copy-btn" data-copy="DHAG">نسخ</button></div>
+          <div class="bank-row"><span>البنك</span><strong>BANK AL ETIHAD</strong></div>
+          <div class="bank-row"><span>اسم المستفيد</span><strong>HATEM SAMEH IBRAHIM ALDASUQI</strong></div>
+        </div>
+
+        <p class="payment-note">يفضّل كتابة رقم الطلب في ملاحظة التحويل إن كان تطبيق البنك يسمح بذلك. لا ترسل أي OTP أو بيانات بطاقة.</p>
+
+        <div class="checkout-actions checkout-actions-three">
+          <a id="sendWhatsApp" class="checkout-primary" href="https://wa.me/962796883834" target="_blank" rel="noopener">إرسال الإثبات عبر WhatsApp ↗</a>
+          <a id="sendEmail" class="checkout-secondary" href="mailto:info@dhagency.world">إرسال التفاصيل بالإيميل ✉</a>
+          <button id="copyOrder" type="button" class="checkout-secondary">نسخ تفاصيل الطلب</button>
+        </div>
+        <p class="proof-help">على WhatsApp أرفق صورة الحوالة بعد فتح المحادثة. بالإيميل ستفتح رسالة جاهزة؛ أرفق صورة الحوالة قبل الإرسال.</p>
+        <button id="backCheckout" type="button" class="checkout-back">رجوع وتعديل البيانات</button>
+      </div>
+
+      <div id="copyToast" class="copy-toast" role="status" aria-live="polite">تم النسخ ✓</div>
+    </div>
+  </dialog>
 
   <dialog id="posterModal" class="poster-modal">
     <button id="closeModal" aria-label="إغلاق">×</button>
