@@ -24,3 +24,5 @@ V12 update: Added DH WEB one-time website design package at 200 JD with CliQ che
 
 
 Update: Added professional owner signature “HATEM ALDASUQI” below the header logo on the homepage and success page.
+
+Update: Owner signature style changed to a more handwritten look.
