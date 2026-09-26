@@ -23,7 +23,11 @@
         <img src="assets/dh-logo-circle.jpg" alt="DH Agency" />
         <span class="brand-signature success-signature">HATEM ALDASUQI</span>
       </div>
-      <a href="/">العودة للموقع ←</a>
+      <div class="success-header-actions">
+        <button class="ui-toggle lang-toggle" id="langToggle" type="button" aria-label="Switch language"><span>文</span><span id="langToggleText">EN</span></button>
+        <button class="ui-toggle theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"><span id="themeIcon">☾</span><span id="themeToggleText">داكن</span></button>
+        <a href="/">العودة للموقع ←</a>
+      </div>
     </div>
   </header>
 
@@ -65,13 +69,50 @@
     document.getElementById('sOrder').textContent = data.orderId;
     document.getElementById('sPackage').textContent = data.packageName;
     document.getElementById('sPrice').textContent = data.price;
-    const text = `طلب DH Agency\nرقم الطلب: ${data.orderId}\nالباقة: ${data.packageName}\nالمبلغ: ${data.price} JD\nالاسم: ${data.name}\nرقم الهاتف: ${data.phone}\nالمشروع: ${data.project}\nطريقة الدفع: CliQ — DHAG\nتم التحويل، ومرفق إثبات الدفع.`;
+    const lang = localStorage.getItem('dh-lang') || 'ar';
+    const text = lang === 'en'
+      ? `DH Agency Order\nOrder ID: ${data.orderId}\nPackage: ${data.packageName}\nAmount: ${data.price} JD\nName: ${data.name}\nPhone: ${data.phone}\nProject: ${data.project}\nPayment: CliQ — DHAG\nTransfer completed; payment proof attached.`
+      : `طلب DH Agency\nرقم الطلب: ${data.orderId}\nالباقة: ${data.packageName}\nالمبلغ: ${data.price} JD\nالاسم: ${data.name}\nرقم الهاتف: ${data.phone}\nالمشروع: ${data.project}\nطريقة الدفع: CliQ — DHAG\nتم التحويل، ومرفق إثبات الدفع.`;
     document.getElementById('successWhatsApp').href = `https://wa.me/962798663834?text=${encodeURIComponent(text)}`;
-    document.getElementById('successEmail').href = `mailto:info@dhagency.world?subject=${encodeURIComponent(`DH Agency - ${data.orderId} - ${data.packageName}`)}&body=${encodeURIComponent(text + '\n\nيرجى إرفاق صورة إثبات التحويل قبل الإرسال.')}`;
+    document.getElementById('successEmail').href = `mailto:info@dhagency.world?subject=${encodeURIComponent(`DH Agency - ${data.orderId} - ${data.packageName}`)}&body=${encodeURIComponent(text + (lang === 'en' ? '\n\nPlease attach the transfer proof before sending.' : '\n\nيرجى إرفاق صورة إثبات التحويل قبل الإرسال.'))}`;
     document.getElementById('successCopy').addEventListener('click', async () => {
       try { await navigator.clipboard.writeText(text); document.getElementById('successCopy').textContent='تم النسخ ✓'; }
       catch(e) { alert(text); }
     });
   </script>
+
+  <script>
+    const successTranslations = {
+      'العودة للموقع ←':'Back to site ←','تم تسجيل خطوة التحويل.':'Transfer step recorded.',
+      'بقيت خطوة أخيرة: أرسل صورة الحوالة حتى يراجع فريق DH التحويل ويؤكد بدء تنفيذ الخدمة. هذه الصفحة لا تعني أن الدفع تم تأكيده تلقائيًا.':'One last step: send your transfer proof so the DH team can review it and confirm the start of your service. This page does not mean payment was verified automatically.',
+      'رقم الطلب':'Order ID','الباقة':'Package','المبلغ':'Amount','إرسال الإثبات عبر WhatsApp ↗':'Send proof via WhatsApp ↗',
+      'إرسال بالإيميل ✉':'Send by email ✉','نسخ تفاصيل الطلب':'Copy order details',
+      'أرفق صورة الحوالة في الرسالة. لا ترسل OTP أو بيانات بطاقة أو كلمة مرور.':'Attach the transfer proof to your message. Never send an OTP, card details or password.',
+      'تم النسخ ✓':'Copied ✓'
+    };
+    const successReverse = Object.fromEntries(Object.entries(successTranslations).map(([ar,en])=>[en,ar]));
+    let successLang = localStorage.getItem('dh-lang') || 'ar';
+    function successReplace(map){
+      const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),nodes=[]; while(w.nextNode())nodes.push(w.currentNode);
+      nodes.forEach(n=>{const raw=n.nodeValue,t=raw.trim(); if(!map[t])return; n.nodeValue=(raw.match(/^\s*/)?.[0]||'')+map[t]+(raw.match(/\s*$/)?.[0]||'');});
+    }
+    function successApplyLang(lang,initial=false){
+      if(lang==='en'){ if(successLang==='ar'||initial)successReplace(successTranslations); document.documentElement.lang='en';document.documentElement.dir='ltr'; }
+      else { if(successLang==='en'||initial)successReplace(successReverse); document.documentElement.lang='ar';document.documentElement.dir='rtl'; }
+      successLang=lang;localStorage.setItem('dh-lang',lang);
+      document.getElementById('langToggleText').textContent=lang==='ar'?'EN':'AR';
+      document.getElementById('themeToggleText').textContent=document.documentElement.dataset.theme==='dark'?(lang==='ar'?'فاتح':'Light'):(lang==='ar'?'داكن':'Dark');
+    }
+    function successApplyTheme(theme){
+      document.documentElement.dataset.theme=theme;localStorage.setItem('dh-theme',theme);
+      document.getElementById('themeIcon').textContent=theme==='dark'?'☀':'☾';
+      document.getElementById('themeToggleText').textContent=theme==='dark'?(successLang==='ar'?'فاتح':'Light'):(successLang==='ar'?'داكن':'Dark');
+    }
+    successApplyTheme(localStorage.getItem('dh-theme')||'light');
+    const sl=localStorage.getItem('dh-lang')||'ar'; successLang=sl==='en'?'ar':'en'; successApplyLang(sl,true);
+    document.getElementById('langToggle')?.addEventListener('click',()=>successApplyLang(successLang==='ar'?'en':'ar'));
+    document.getElementById('themeToggle')?.addEventListener('click',()=>successApplyTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+  </script>
+
 </body>
 </html>

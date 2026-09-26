@@ -51,3 +51,13 @@ V19 update:
 V20 update:
 - Replaced the homepage hero image with the provided Replit × DH Agency collaboration image.
 - Kept the existing hero frame, layout, overlays, signature, checkout, SEO, analytics, and all previous functionality unchanged.
+
+
+V21 update:
+- Added persistent Light/Dark mode toggle.
+- Added Arabic/English language toggle with RTL/LTR switching.
+- Added translated checkout and success page UI.
+- User preferences are saved in localStorage.
+
+
+V22 update: removed the "FOUNDER SIGNATURE" label and removed the faded owner photo/watermark; kept only the signature strip under the header/dashboard area.

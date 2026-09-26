@@ -99,3 +99,87 @@
 
 /* V20 — new hero image */
 .logo-card img{object-fit:cover;object-position:center 48%;transform:scale(1.03)}
+
+
+/* V21 — theme and language controls */
+.nav-tools{display:flex;align-items:center;gap:7px;direction:ltr}
+.ui-toggle{height:38px;min-width:58px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.58);color:var(--ink);font:700 11px "Manrope",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;backdrop-filter:blur(12px);transition:.2s ease}
+.ui-toggle:hover{transform:translateY(-1px);background:rgba(255,255,255,.86)}
+.toggle-icon,#themeIcon{font-size:14px;line-height:1}
+html[dir="ltr"] body{font-family:"Manrope","Cairo",sans-serif}
+html[dir="ltr"] .brand{margin-left:0;margin-right:auto}
+html[dir="ltr"] .kicker,html[dir="ltr"] .why-kicker,html[dir="ltr"] .brands-kicker{text-align:left}
+html[dir="ltr"] .faq{margin-right:0;margin-left:280px}
+html[dir="ltr"] .owner-strip-copy{align-items:flex-start}
+html[dir="ltr"] .section-title h2,html[dir="ltr"] .brands-head h2,html[dir="ltr"] .final-inner h2{letter-spacing:-.03em}
+html[dir="ltr"] .checkout-brand{padding-left:0;padding-right:50px}
+html[dir="ltr"] .checkout-close{left:auto;right:18px}
+html[dir="ltr"] .checkout-summary b{grid-column:2}
+html[dir="ltr"] .bank-row strong{text-align:left;direction:ltr}
+
+html[data-theme="dark"]{--bg:#0d0e11;--ink:#f3f4f6;--muted:#a9abb3;--line:rgba(255,255,255,.13);--silver:#303239}
+html[data-theme="dark"] body{background:#0d0e11;color:var(--ink)}
+html[data-theme="dark"] .ambient-one{background:#202b3b;opacity:.32}
+html[data-theme="dark"] .ambient-two{background:#3b252f;opacity:.26}
+html[data-theme="dark"] .site-header{background:rgba(13,14,17,.82);border-bottom-color:rgba(255,255,255,.07)}
+html[data-theme="dark"] .ui-toggle{background:rgba(255,255,255,.07);color:#f5f5f7;border-color:rgba(255,255,255,.13)}
+html[data-theme="dark"] .ui-toggle:hover{background:rgba(255,255,255,.13)}
+html[data-theme="dark"] .nav-links a{color:#f1f2f4}
+html[data-theme="dark"] .menu span{background:#f1f2f4}
+html[data-theme="dark"] .btn.ghost{color:#f5f5f7;border-color:rgba(255,255,255,.15)}
+html[data-theme="dark"] .ticker{background:rgba(255,255,255,.025);border-color:rgba(255,255,255,.09)}
+html[data-theme="dark"] .service{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.08)}
+html[data-theme="dark"] .service:hover{background:rgba(255,255,255,.075);box-shadow:0 24px 70px rgba(0,0,0,.30)}
+html[data-theme="dark"] .portfolio-card{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.09)}
+html[data-theme="dark"] .portfolio-card:hover{background:rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+html[data-theme="dark"] .brands-head{border-color:rgba(255,255,255,.10)}
+html[data-theme="dark"] .brands-wall{background:rgba(255,255,255,.02);border-color:rgba(255,255,255,.10)}
+html[data-theme="dark"] .brands-wall span{color:#eceef2;background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.10)}
+html[data-theme="dark"] .brands-wall span:hover{background:rgba(255,255,255,.08)}
+html[data-theme="dark"] .why-panel{background:linear-gradient(135deg,#17191f 0%,#111217 100%);box-shadow:0 30px 100px rgba(0,0,0,.25)}
+html[data-theme="dark"] .faq details{background:#15171c;border:1px solid rgba(255,255,255,.06)}
+html[data-theme="dark"] .owner-strip-card{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.09);box-shadow:0 12px 40px rgba(0,0,0,.18)}
+html[data-theme="dark"] .owner-strip-photo{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.07)}
+html[data-theme="dark"] .owner-strip-label{color:#a6a8ae}
+html[data-theme="dark"] .logo-card{box-shadow:0 35px 100px rgba(0,0,0,.42)}
+html[data-theme="dark"] .micro{background:rgba(20,22,27,.82);color:#f2f3f5;border-color:rgba(255,255,255,.08);box-shadow:0 14px 40px rgba(0,0,0,.24)}
+html[data-theme="dark"] .checkout-wrap{background:#14161b;color:#f4f4f6}
+html[data-theme="dark"] .checkout-close{background:#202229;color:#fff;border-color:#333640}
+html[data-theme="dark"] .checkout-brand small,html[data-theme="dark"] .checkout-intro,html[data-theme="dark"] .payment-note,html[data-theme="dark"] .checkout-back,html[data-theme="dark"] .proof-help{color:#aaaeb7}
+html[data-theme="dark"] .checkout-form label{color:#d5d7dc}
+html[data-theme="dark"] .checkout-form input{background:#1c1f25;color:#fff;border-color:#30343d}
+html[data-theme="dark"] .checkout-secondary{background:#1d2026;color:#fff;border-color:#343841}
+html[data-theme="dark"] .order-pill{background:#252831;color:#e4e5e8}
+html[data-theme="dark"] .bank-card{background:#1b1d23;border-color:#30333b}
+html[data-theme="dark"] .bank-row{border-color:#2b2e35}
+html[data-theme="dark"] .bank-row.highlight{background:#22252c}
+html[data-theme="dark"] .copy-btn{background:#292c33;color:#fff;border-color:#3b3f49}
+html[data-theme="dark"] .copy-toast{background:#f3f4f6;color:#101114}
+html[data-theme="dark"] .success-body{background:#0d0e11;color:#f3f4f6}
+html[data-theme="dark"] .success-header{background:rgba(13,14,17,.86);border-color:rgba(255,255,255,.08)}
+html[data-theme="dark"] .success-header a{color:#f3f4f6}
+html[data-theme="dark"] .success-card{background:rgba(24,26,31,.88);border-color:rgba(255,255,255,.07);box-shadow:0 34px 100px rgba(0,0,0,.30)}
+html[data-theme="dark"] .success-card>p{color:#aeb1b8}
+html[data-theme="dark"] .success-order{background:#1e2127}
+html[data-theme="dark"] .success-row{border-color:#30333a}
+html[data-theme="dark"] .success-footer{border-color:rgba(255,255,255,.08)}
+@media(max-width:980px){
+  html[dir="ltr"] .faq{margin-left:0}
+  html[data-theme="dark"] .nav-links{background:rgba(18,20,24,.98);border-color:rgba(255,255,255,.10)}
+}
+@media(max-width:640px){
+  .nav{gap:10px}
+  .nav-tools{gap:5px}
+  .ui-toggle{height:34px;min-width:48px;padding:0 9px;font-size:10px}
+  .ui-toggle .toggle-icon{display:none}
+  .nav-tools + .nav-cta{display:none}
+}
+
+.success-header-actions{display:flex;align-items:center;gap:8px}.success-header-actions>a{margin-inline-start:8px}@media(max-width:640px){.success-header-actions{gap:5px}.success-header-actions>a{font-size:10px;margin-inline-start:2px}}
+
+
+/* V22 signature only cleanup */
+.owner-strip-card.signature-only{padding:14px 22px;justify-content:center;gap:0}
+.owner-strip-card.signature-only .owner-strip-signature-img{height:58px;max-width:min(100%,560px)}
+@media(max-width:980px){.owner-strip-card.signature-only .owner-strip-signature-img{height:52px;max-width:100%}}
+@media(max-width:640px){.owner-strip-card.signature-only{padding:12px 14px}.owner-strip-card.signature-only .owner-strip-signature-img{height:42px;max-width:100%}}
