@@ -11,3 +11,10 @@ Static HTML/CSS/JS site ready for GitHub + Vercel.
 
 ## Deployment
 Upload the *contents* of this folder to the repository root. Vercel should redeploy automatically.
+
+
+## V10 update
+- Added a polished “Brands We’ve Worked With / علامات ومشاريع عملنا معها” section with the full approved client list.
+
+
+V11 update: Brands We’ve Worked With list updated to the 16 confirmed DH Agency clients provided by the owner.

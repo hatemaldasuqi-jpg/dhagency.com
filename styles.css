@@ -60,3 +60,15 @@
 .success-footer{padding:30px 0;border-top:1px solid var(--line);color:#85817a;font:11px "Manrope",sans-serif}.success-footer .shell{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:980px){.portfolio-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.portfolio-grid{grid-template-columns:1fr}.portfolio-card{min-height:155px;padding:22px}.portfolio-index{top:20px;right:22px}.package-card.featured{transform:none}.package-card.featured:hover{transform:translateY(-6px)}.checkout-actions-compact,.success-actions{grid-template-columns:1fr}.success-card{padding:26px 20px;border-radius:26px}.success-main{padding:44px 12px}.success-header{height:72px}.success-header img{width:54px;height:54px}}
+
+/* V10 — brands wall */
+.brands-section{padding:16px 0 120px}
+.brands-head{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:end;margin-bottom:30px;padding-top:14px;border-top:1px solid var(--line)}
+.brands-kicker{margin:22px 0 12px;font-family:"Manrope",sans-serif;font-size:10px;letter-spacing:.2em;color:#8e8b86;direction:ltr;text-align:right}
+.brands-head h2{margin:0;white-space:pre-line;font-size:clamp(34px,4.2vw,58px);line-height:1.15;letter-spacing:-.04em}
+.brands-copy{margin:0;color:var(--muted);line-height:2;font-size:14px;max-width:520px}
+.brands-wall{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-right:1px solid var(--line);background:rgba(255,255,255,.22);overflow:hidden;border-radius:24px}
+.brands-wall span{min-height:108px;padding:22px 16px;display:grid;place-items:center;text-align:center;border-left:1px solid var(--line);border-bottom:1px solid var(--line);font:700 13px/1.35 "Manrope",sans-serif;letter-spacing:.035em;color:#2c2d30;background:rgba(255,255,255,.28);transition:.25s ease}
+.brands-wall span:hover{background:#fff;transform:translateY(-2px);box-shadow:inset 0 0 0 1px rgba(16,17,20,.03)}
+@media(max-width:980px){.brands-wall{grid-template-columns:repeat(3,1fr)}.brands-head{grid-template-columns:1fr;gap:18px;align-items:start}}
+@media(max-width:640px){.brands-section{padding:0 0 90px}.brands-wall{grid-template-columns:repeat(2,1fr);border-radius:20px}.brands-wall span{min-height:90px;padding:18px 10px;font-size:11px}.brands-copy{font-size:13px}}
